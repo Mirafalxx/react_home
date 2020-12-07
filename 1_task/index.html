@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <link rel="stylesheet" href='./main.css'>
+
+</head>
+
+<body>
+    <div id="app">
+    </div>
+    <script type="text/babel">
+        const MoviePromo = props => {
+            return (
+                <div className='promo'>
+                    <img src={props.img} className='image' />
+                    <h2 className='title'>{props.title}</h2>
+                    <h4 className='release'>{props.release} year</h4>
+                </div>
+            );
+        };
+
+
+        const Films = (
+            <React.Fragment>
+                <MoviePromo title='The Crow' release='1994' img='./assets/1st_Promo.jpg' />
+                <MoviePromo title='Green Mile' release='1999' img='./assets/1st_Promo.jpg' />
+                <MoviePromo title='Constantine' release='2005' img='./assets/1st_Promo.jpg' />
+
+            </React.Fragment>
+        )
+        const app = document.getElementById('app');
+        ReactDOM.render(Films, app)
+    </script>
+</body>
+
+</html>

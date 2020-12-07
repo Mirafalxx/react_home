@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <link rel="stylesheet" href='./main.css'>
+
+</head>
+
+<body>
+
+
+    <header className="hero" id='app'>
+        <div className="container">
+        </div>
+    </header>
+
+    <script type="text/babel">
+        const NavBar = () => {
+            return (
+                <div className="hero-header">
+                    <div className="social-links">
+                        <a href="#" className="social-link" target="_blank">
+                            Movies
+                    </a>
+                        <a href="#" className="social-link" target="_blank">
+                            Serials
+                    </a>
+
+                        <a href="#" className="social-link" target="_blank">
+                            Books
+                    </a>
+
+                        <a href="#" className="social-link" target="_blank">
+                            Games
+                    </a>
+                    </div>
+                </div>
+            )
+
+        }
+        const MainContent = () => {
+            return (
+                <div className="hero-content">
+                    <div className="hero-text">
+                        <span className="hero-subtitle wow fadeInRight">ETO YA</span>
+                        <h1 className="hero-title">Максим Суханов</h1>
+                        <p className="hero-description">
+                            Данная Веб страница расскажет о моих любимых увлечения
+                    </p>
+                        <button className="button hero-button">Спросите меня</button>
+                    </div>
+
+                </div>
+            )
+        }
+        const FinalRender = (
+            <React.Fragment>
+                <div className='container'>
+                    <NavBar />
+                    <MainContent />
+                </div>
+            </React.Fragment>
+        )
+
+        const app = document.getElementById('app');
+        ReactDOM.render(FinalRender, app)
+    </script>
+</body>
+
+</html>
