@@ -24,7 +24,7 @@
         const NavBar = () => {
             return (
                 <div className="hero-header">
-                    <div className="social-links">
+                    <div className="">
                         <a href="#" className="social-link" target="_blank">
                             Movies
                     </a>
@@ -48,14 +48,37 @@
             return (
                 <div className="hero-content">
                     <div className="hero-text">
-                        <span className="hero-subtitle wow fadeInRight">ETO YA</span>
+                        <span className="hero-subtitle wow fadeInRight">Mirafal ™</span>
                         <h1 className="hero-title">Максим Суханов</h1>
                         <p className="hero-description">
-                            Данная Веб страница расскажет о моих любимых увлечения
+                            Тут должен быть очень интересный текст,но я его не придумал
                     </p>
                         <button className="button hero-button">Спросите меня</button>
                     </div>
 
+                </div>
+            );
+        };
+        const Footer = () => {
+            return (
+                <div className='footer'>
+                    <div class="footer-content">
+                        <h2 className='footer-title'>Суханов Максим</h2>
+                        <div className='divider'></div>
+                        <div class="footer-links">
+                            <a href="#" className='footer-link'>Twitter</a>
+                            <a href="#" className='footer-link'>Github</a>
+                            <a href="#" className='footer-link'>gmail</a>
+                            <a href="#" className='footer-link'>discord</a>
+                        </div>
+                        <div class="phone-links"></div>
+                    </div>
+                </div>
+            )
+        };
+        const favSerialForm = () => {
+            return (
+                <div class="favForm">
                 </div>
             )
         }
@@ -64,6 +87,7 @@
                 <div className='container'>
                     <NavBar />
                     <MainContent />
+                    <Footer />
                 </div>
             </React.Fragment>
         )
